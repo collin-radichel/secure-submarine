@@ -1,0 +1,249 @@
+html,
+body,
+#react-root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------------
+COLOR PALETTE
+** purple - #9f4eff / rgb(159, 78, 255)
+** off white - #dee8f7 / rgb(222, 232, 247)
+** deep blue - #0636ab / rgb(6, 54, 171)
+** medium aqua - #04b2d9 / rgb(4, 178, 217)
+** bright aqua - #05f2f2 / rgb(5, 242, 242)
+** drk blue - #020854 / rgb(2, 8, 84)
+-------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------
+SITE BACKGROUND
+-------------------------------------------------------------------------------- */
+
+body {
+  background-color: #020854;
+  background-image: url(./images/ocean-three-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 105%;
+  background-position: center -10px;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  background-image: linear-gradient(to top, #020854 20%, rgb(6, 54, 171, 0.2));
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+#react-root {
+  position: relative;
+  z-index: 200;
+}
+
+/* --------------------------------------------------------------------------------
+Container
+-------------------------------------------------------------------------------- */
+
+.container {
+  padding: 20px;
+}
+
+/* --------------------------------------------------------------------------------
+Base Title
+-------------------------------------------------------------------------------- */
+
+.titleBase {
+  color: #05f2f2;
+  text-shadow: 1px 2px 1px #020854;
+}
+
+.titleBase_inner {
+  color: #0636ab;
+}
+
+/* --------------------------------------------------------------------------------
+Button
+-------------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-color: #0636ab;
+  border-width: 1px 1px 3px;
+  border-radius: 4px;
+  background-color: #04b2d9;
+  color: #020854;
+  font-size: 1.1rem;
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn_sizeMin {
+  min-height: 50px;
+  min-width: 100px;
+}
+
+.btn_sizeSm {
+  padding: 10px 15px;
+  font-size: 0.8rem;
+}
+
+.btn_sizeFull {
+  display: block;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #05f2f2;
+  text-decoration: none;
+}
+
+/* This line makes the "Register" and "Login" buttons look like links */
+.btn_asLink {
+  padding: 0;
+  border-width: 0;
+  border-bottom: 1px solid #05f2f2;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  color: #05f2f2;
+}
+
+.btn_asLink:hover {
+  background-color: transparent;
+  border-color: #05f2f2;
+  color: #05f2f2;
+}
+
+/* --------------------------------------------------------------------------------
+Alert
+-------------------------------------------------------------------------------- */
+
+.alert {
+  box-sizing: border-box;
+  padding: 15px 10px;
+  margin: 15px 0;
+  border: 2px solid #e01616;
+  background-color: #efefef;
+  border-radius: 3px;
+  color: #e01616;
+  font-size: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------------
+Form Treatment
+-------------------------------------------------------------------------------- */
+
+.formPanel {
+  box-sizing: border-box;
+  width: 400px;
+  max-width: 100%;
+  padding: 25px;
+  margin: 0 auto 20px;
+  background-color: rgb(222, 232, 247, 0.8);
+  border-top: 1px solid #efefef;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.7);
+}
+
+.textField {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+}
+
+.textField > input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #0636ab;
+  border-radius: 3px;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------------
+Content Panel
+-------------------------------------------------------------------------------- */
+
+.panel {
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: rgb(222, 232, 247, 0.8);
+  border-top: 1px solid #efefef;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.7);
+}
+
+/* --------------------------------------------------------------------------------
+Simple Table
+-------------------------------------------------------------------------------- */
+
+.simpleTable {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #020854;
+  border-collapse: collapse;
+}
+
+.simpleTable td,
+.simpleTable th {
+  padding: 8px;
+  border: 1px solid #020854;
+}
+
+.simpleTable thead tr {
+  background-color: #0636ab;
+  color: #05f2f2;
+}
+
+.simpleTable td:first-child {
+  text-align: center;
+}
+
+.simpleTable tbody tr:nth-child(2n + 1) {
+  background-color: #dee8f7;
+}
+
+/* --------------------------------------------------------------------------------
+Profile Image
+-------------------------------------------------------------------------------- */
+
+.profImg {
+  box-sizing: border-box;
+  width: 60%;
+  padding-bottom: 60%;
+  margin: 0 auto 15px;
+  border: 4px solid #04b2d9;
+  border-radius: 100%;
+  background-image: url(./images/default-profile.jpg);
+  background-size: cover;
+  box-shadow: inset 0px 1px 16px rgb(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  font-size: 0;
+}
